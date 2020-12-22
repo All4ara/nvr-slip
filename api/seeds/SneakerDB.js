@@ -11,10 +11,6 @@ const kicks = [
         gender: "Mens",
         styleCode: "417744 001",
         region: "n/a",
-        updates: {
-            type: Date,
-            default: Date.now
-        },
         locations: ["ebay.com"],
         stock: 1500,
         company: "Nike"
@@ -27,10 +23,6 @@ const kicks = [
         gender: "Mens",
         styleCode: "YP6U2PPC",
         region: "US/Europe",
-        updates: {
-            type: Date,
-            default: Date.now
-        },
         locations: ["louisvuitton.com"],
         
         company: "Louis Vuitton"
@@ -43,10 +35,6 @@ const kicks = [
         gender: "Mens",
         styleCode: "D97921",
         region: "US/Europe",
-        updates: {
-            type: Date,
-            default: Date.now
-        },
         locations: ["chanel.com"],
         stock: 1000,
         company: "Adidas"
