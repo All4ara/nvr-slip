@@ -18,28 +18,26 @@ const SneakerList = () => {
     const ShowKicks = () => {
         return kicks && kicks.map((kick) => {
             return (
-                
-                <div className="card m-5 p-5">
-                    <Link to={`/sneakers/${kick._id}`}><img className="card-img" src={kick.image} alt="card" /></Link>
-                    <div className="">
-                        <h1>{kick.title}</h1>
-                        <h4>Released: {kick.release}</h4>
-                        <h2>Retial: {kick.price}</h2>
-                        <h6>{kick.gender}</h6>
-                        <h6>{kick.styleCode}</h6>
-                        <h6>{kick.region}</h6>
-                        <h6>Stock:{kick.stock}</h6>
+                <div className="d-flex flex-column align-items-center mt-5">
+                    <div className="card">
+                        <img className="card-img" src={kick.image} alt="card" height="120" />
+                        <div className="card-img-overlay">
+                            <h3>{kick.title}</h3>
+                            <h4>Released: {kick.release}</h4>
+                            <h4>Retial: {kick.price}</h4>
+                        </div>
                         
                     </div>
-                </div>
 
+                    <Link to={`/sneakers/${kick._id}`}><button className="more-info mt-3 mb-3">More Info</button></Link>
+                </div>
             )
         })
     }
 
     return (
-        <div className="container p-4">
-            <div className="row">
+        <div className="container m-5">
+            <div className="d-flex justify-content-between flex-row">
                 <ShowKicks />
             </div>
         </div>

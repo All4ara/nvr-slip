@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import { useState, useEffect } from "react";
-// import { userContext } from "../context/UserCtx";
+import { useState, useEffect, useContext } from "react";
+import { userContext } from "../context/userCtx";
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 
 
 const SneakerFromList = (props) => {
+    const { user } = useContext(userContext);
     const [kick, setKicks] = useState(false)
     const history = useHistory()
 
