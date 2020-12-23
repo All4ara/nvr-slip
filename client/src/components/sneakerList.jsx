@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Background from "./background"
 
 const SneakerList = () => {
     const [kicks, setKicks] = useState(false)
@@ -18,6 +19,7 @@ const SneakerList = () => {
     const ShowKicks = () => {
         return kicks && kicks.map((kick) => {
             return (
+                
                 <div className="d-flex flex-column align-items-center mt-5">
                     <div className="card kickbox">
                         <img className="card-img" src={kick.image} alt="card" height="120" />
@@ -37,6 +39,7 @@ const SneakerList = () => {
     return (
         <div className="container m-5">
             <div className="d-flex justify-content-between flex-row">
+            
                 <ShowKicks />
             </div>
         </div>

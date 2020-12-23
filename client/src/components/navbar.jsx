@@ -5,6 +5,7 @@ import Logo from '../assets/logo.png'
 import { useContext } from "react";
 import { userContext } from "../context/userCtx";
 import { useHistory } from 'react-router-dom'
+import Background from "./background"
 
 const Header = () => {
 
@@ -34,6 +35,7 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            <Background/>
             
         </>
     );
