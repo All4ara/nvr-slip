@@ -37,7 +37,7 @@ const SneakerFromList = (props) => {
 
     const ShowIndividual = () => {
         return (
-            <div>
+            <div className="kick-list mt-5">
                 <div className="card m-5 p-5 d-flex flex-row indi-kicks">
                         <div>
                             <img className="card-img" src={kick.image} alt="card" />

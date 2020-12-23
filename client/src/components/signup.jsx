@@ -43,7 +43,7 @@ const Adduser = () => {
 
 
     return (
-        <div className="container mt-5 p-5">
+        <div className="kick-list container mt-5 p-5">
             <div className="row ">
                 <form onSubmit={addUserHandler}>
                     <input className="col-12" type="text" name="firstName" value={username.firstName} placeholder="First Name" onChange={handleUserChange}></input>
