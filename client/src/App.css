@@ -37,7 +37,7 @@
   }
 }
 
-.card{
+.kickbox{
   width: 10rem;
 }
 
@@ -84,4 +84,36 @@
 
 .nav-link{
   font-weight: 900;
+}
+
+.indi-kicks{
+  width: 35rem;
+}
+
+.main-info h1,
+.main-info h2,
+.main-info h4{
+  font-size: 1rem;
+  margin: .5rem 1rem;
+  width: 9rem;
+}
+
+.side-info h6{
+  margin: .5rem;
+  font-size: .7rem;
+}
+.crud-functions button{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 255, 221);
+  border-radius: 10px;
+  font-weight: 900;
+  text-shadow: 1px 1px black;
+  width: 5rem;
+  
+}
+
+.crud-functions button:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 221);
+  text-shadow: 1px 1px rgb(255, 255, 255);
 }

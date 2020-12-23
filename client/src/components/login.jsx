@@ -47,8 +47,6 @@ const Login = () => {
                 <form onSubmit={loginUserHandler}>
                     <input className="col-12" type="text" name="email" value={username.email} placeholder="Email" onChange={handleUserChange}></input>
                     <input className="col-12" type="text" name="password" value={username.password} placeholder="Password" onChange={handleUserChange}></input>
-
-
                     <button type="submit">Submit</button>
                 </form>
             </div>
