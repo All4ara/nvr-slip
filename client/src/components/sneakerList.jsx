@@ -37,8 +37,8 @@ const SneakerList = () => {
     }
 
     return (
-        <div className="kick-list container m-5">
-            <div className="d-flex justify-content-between flex-row">
+        <div className="kick-list container-fluid mt-5">
+            <div className="d-flex justify-content-around flex-row">
             
                 <ShowKicks />
             </div>
