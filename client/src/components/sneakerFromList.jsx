@@ -62,6 +62,7 @@ const SneakerFromList = (props) => {
                         <Link to={`/sneakers/edit/${kick._id}`}><button className="m-3">Edit</button></Link>
                         <button className="m-3" onClick={handleOnClick}>Delete</button>
                         
+                        
                     </div>
                 ) : null}
 

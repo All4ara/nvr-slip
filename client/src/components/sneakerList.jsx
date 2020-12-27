@@ -20,7 +20,7 @@ const SneakerList = () => {
         return kicks && kicks.map((kick) => {
             return (
                 
-                <div className="d-flex flex-column align-items-center mt-5">
+                <div className="d-flex flex-column align-items-center mt-5 col-12 col-sm-6 col-md-4 col-lg-3">
                     <div className="card kickbox">
                         <img className="card-img" src={kick.image} alt="card" height="120" />
                         <div className="card-img-overlay">
@@ -38,7 +38,7 @@ const SneakerList = () => {
 
     return (
         <div className="kick-list container-fluid mt-5">
-            <div className="d-flex justify-content-around flex-row">
+            <div className="row ">
             
                 <ShowKicks />
             </div>

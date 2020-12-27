@@ -159,6 +159,24 @@ const Background = () => {
                 <div className="hexagon"></div>
                 <div className="hexagon"></div>
             </div>
+            <div className="rowww">
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+                <div className="hexagon"></div>
+            </div>
         </div>
     );
 };

@@ -35,7 +35,7 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-            <Background/>
+            {/* <Background/> */}
             
         </>
     );
