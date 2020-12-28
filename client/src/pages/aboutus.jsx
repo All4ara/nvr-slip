@@ -16,7 +16,7 @@ const Aboutus = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 ">
+                <div className="col-12 mb-5">
                     <p>
                         Are you tired of missing out on every years most exclusive sneaker drops?
                         <br/>

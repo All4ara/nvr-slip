@@ -43,8 +43,8 @@ const SneakerList = () => {
     }
 
     return (
-        <div className="kick-list container-fluid mt-5">
-            <div className="row ">
+        <div className="kick-list container-fluid mt-5 ">
+            <div className="row mb-5">
             
                 <ShowKicks />
             </div>

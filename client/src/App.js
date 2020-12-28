@@ -10,6 +10,7 @@ import AddPost from '../src/components/addpost'
 import Background from "../src/components/background"
 import Mylot from "./pages/mylot"
 import Aboutus from "./pages/aboutus"
+import Footer from './components/footer'
 
 function App(props) {
   return (
@@ -37,6 +38,7 @@ function App(props) {
 
       <Route exact path="/back" render={(props) => <Background {...props} />} />
       
+      <Footer/>
     </>
   );
 }
