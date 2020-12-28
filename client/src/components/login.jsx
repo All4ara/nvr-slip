@@ -42,7 +42,7 @@ const Login = () => {
 
 
     return (
-        <div className="kick-list container m-5 p-5">
+        <div className="kick-list container mt-5 p-5">
             <div className="row">
                 <form onSubmit={loginUserHandler}>
                     <input className="col-12" type="text" name="email" value={username.email} placeholder="Email" onChange={handleUserChange}></input>

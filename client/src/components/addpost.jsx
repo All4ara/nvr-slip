@@ -27,7 +27,7 @@ const AddPost = () => {
         axios.post("http://localhost:3000/sneakers", article)
         .then(res => console.log(res, "Posted"))
         history.push("/sneakers")
-        .catch(err => console.log(err, "error with post"))
+        
     }
     
     // function addArticleHandler(event) {
@@ -56,7 +56,7 @@ const AddPost = () => {
     // }
     
     return (
-        <div className="container m-5 p-5">
+        <div className="container mt-5 p-5">
             <div className="row d-flex flex-column">
                 {/* <form onSubmit={addArticleHandler}> */}
                     <input type="text" name="title" value={article.title} placeholder="title" onChange={handleArticleChange}></input>
