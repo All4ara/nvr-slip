@@ -37,13 +37,13 @@ const SneakerFromList = (props) => {
 
     const ShowIndividual = () => {
         return (
-            <div className="kick-list mt-5">
-                <div className="card m-5 p-5 d-flex flex-row indi-kicks">
-                        <div>
-                            <img className="card-img" src={kick.image} alt="card" />
+            <div className="kick-list mt-5 pt-5">
+                <div className="card d-lg-flex flex-lg-row indi-kicks col-12 col-lg-10">
+                        <div className="col-lg-6">
+                            <img className="card-img " src={kick.image} alt="card" />
                         </div>
                         
-                        <div className="main-info">
+                        <div className="main-info ">
                             <h1>{kick?.title}</h1>
                             <h4>Released: {kick?.release}</h4>
                             <h2>Retial: {kick?.price}</h2>
@@ -61,7 +61,7 @@ const SneakerFromList = (props) => {
                     <div className="crud-functions d-flex justify-content-center">
                         <Link to={`/sneakers/edit/${kick._id}`}><button className="m-3">Edit</button></Link>
                         <button className="m-3" onClick={handleOnClick}>Delete</button>
-                        
+                        <Link to="/addPost"><button className="m-3">Add Post</button></Link>
                         
                     </div>
                 ) : null}
@@ -74,7 +74,7 @@ const SneakerFromList = (props) => {
 
     return (
         <div className="container">
-            <div className="row m-3 p-3">
+            <div className="row ">
                 <ShowIndividual />
             </div>
         </div>

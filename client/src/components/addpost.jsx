@@ -11,7 +11,6 @@ const AddPost = () => {
         gender: String,
         styleCode: String,
         region: String,
-        // locations: [String],
         stock: Number,
         company: String
     })
@@ -23,36 +22,43 @@ const AddPost = () => {
             [event.target.name]: event.target.value
         })
     }
+
+    function submit() {
+        axios.post("http://localhost:3000/sneakers", article)
+        .then(res => console.log(res, "Posted"))
+        history.push("/sneakers")
+        .catch(err => console.log(err, "error with post"))
+    }
     
-    function addArticleHandler(event) {
+    // function addArticleHandler(event) {
 
        
 
-        event.preventDefault();
-        var config = {
-            method: 'post',
-            url: "http://localhost:3000/sneakers/addPost",
-            headers: {
-                'Authorization': `Bearer ${localStorage.getItem("token")}`,
-                'Content-Type': 'application/json'
-            },
-            data: { article }
-        };
-        axios(config)
-            .then((response) => {
-                history.push("/sneakers")
+    //     event.preventDefault();
+    //     var config = {
+    //         method: 'post',
+    //         url: "http://localhost:3000/sneakers/addPost",
+    //         headers: {
+    //             'Authorization': `Bearer ${localStorage.getItem("token")}`,
+    //             'Content-Type': 'application/json'
+    //         },
+    //         data: { article }
+    //     };
+    //     axios(config)
+    //         .then((response) => {
+    //             history.push("/sneakers")
 
-            })
-            .catch((error) => {
+    //         })
+    //         .catch((error) => {
 
-            });
+    //         });
 
-    }
+    // }
     
     return (
         <div className="container m-5 p-5">
             <div className="row d-flex flex-column">
-                <form onSubmit={addArticleHandler}>
+                {/* <form onSubmit={addArticleHandler}> */}
                     <input type="text" name="title" value={article.title} placeholder="title" onChange={handleArticleChange}></input>
                     <input type="text" name="image" value={article.image} placeholder="image" onChange={handleArticleChange}></input>
                     <input type="text" name="release" value={article.release} placeholder="release" onChange={handleArticleChange}></input>
@@ -62,8 +68,8 @@ const AddPost = () => {
                     <input type="text" name="region" value={article.region} placeholder="region" onChange={handleArticleChange}></input>
                     <input type="text" name="stock" value={article.stock} placeholder="stock" onChange={handleArticleChange}></input>
                     <input type="text" name="company" value={article.company} placeholder="company" onChange={handleArticleChange}></input>
-                    <button type="submit">Submit</button>
-                </form>
+                    <button onClick={submit}>Submit</button>
+                {/* </form> */}
             </div>
         </div>
     );

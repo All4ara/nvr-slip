@@ -23,6 +23,17 @@ app.get("/sneakers/:id", (req, res) => {
         });
 });
 
+app.post("/sneakers", (req, res) => {
+
+    Sneaker.create(req.body)
+        .then((kicks) => {
+            res.json(kicks)
+        })
+        .catch((err) => {
+            res.status(500), json({ message: "Oops" })
+        })
+});
+
 app.put("/sneakers/:id", (req, res) => {
     console.log(req.body)
     Sneaker.findByIdAndUpdate(req.params.id, req.body)

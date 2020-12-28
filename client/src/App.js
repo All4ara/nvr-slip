@@ -8,7 +8,8 @@ import Login from '../src/components/login'
 import EditPost from '../src/components/editpost'
 import AddPost from '../src/components/addpost'
 import Background from "../src/components/background"
-import Mylot from "../src/components/mylot"
+import Mylot from "./pages/mylot"
+import Aboutus from "./pages/aboutus"
 
 function App(props) {
   return (
@@ -27,6 +28,8 @@ function App(props) {
       
       <Route exact path="/mylot" render={(props) => <Mylot {...props} />} />
       <Route exact path="/addPost" render={(props) => <AddPost {...props} />} />
+
+      <Route exact path="/aboutus" render={(props) => <Aboutus {...props} />} />
 
 
 
