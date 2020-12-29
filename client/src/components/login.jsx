@@ -25,7 +25,7 @@ const Login = () => {
         debugger
 
         event.preventDefault();
-        axios.post("http://localhost:3000/user/login", username)
+        axios.post("http://localhost:3000/mylot/login", username)
             .then((res) => {
                 console.log(res)
                 setUser(res.data.user);

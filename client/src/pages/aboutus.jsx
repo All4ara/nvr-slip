@@ -24,8 +24,9 @@ const Aboutus = () => {
                         Nvr-Slip is your one stop experience for finding out the proper details on each release, then adding those sneakers of intrest to your collection, and finaly reminding you so you never miss a realease.
                         <br/>
                         <br/>
-                        <h3>NVR Bot Comming soon...</h3>
+                        
                     </p>
+                    <h3>NVR Bot Comming soon...</h3>
                 </div>
             </div>
         </div>

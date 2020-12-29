@@ -7,10 +7,12 @@ import { userContext } from "../context/userCtx";
 import { useHistory } from 'react-router-dom'
 import Background from "./background"
 
-const Header = () => {
+const Header = (props) => {
 
     const {user, setUser} = useContext(userContext);
     const history = useHistory()
+
+    console.log(user)
 
     const logout = () => {
         setUser(null)
@@ -28,7 +30,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto text-right">
-                        <Link to="/mylot"><Nav.Link href="#MyLot" className="text-white">My Lot</Nav.Link></Link>
+                        <Link to={user ? `/mylot/users/${user.id}` : `mylot/`}><Nav.Link href="#MyLot" className="text-white">My Lot</Nav.Link></Link>
                         <Link to="/gallery"><Nav.Link href="#Gallery" className="text-white">Gallery</Nav.Link></Link>
                         <Link to="/aboutus"><Nav.Link href="#AboutUs" className="text-white">About Us</Nav.Link></Link>
                         {user ? <Link onClick={logout}><Nav.Link href="#signup">Log Out</Nav.Link></Link> : <Link to="/signup"><Nav.Link href="#signup">Sign Up</Nav.Link></Link>}

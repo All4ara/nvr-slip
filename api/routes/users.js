@@ -16,6 +16,16 @@ app.get("/users", (req, res) => {
         })
 });
 
+app.get("/users/:id", (req, res) => {
+    User.findById(req.params.id)
+        .then((user) => {
+            res.json(user);
+        })
+        .catch((err) => {
+            res.status(500).json({ message: "Oops" });
+        });
+});
+
 app.post("/signup", (req, res) => {
 
     bcrypt.hash(req.body.password, 10, function (err, hash) {
@@ -35,6 +45,7 @@ app.post("/signup", (req, res) => {
                                 user: {
                                     email: user.email,
                                     userType: user.userType
+                                
                                 } 
                             })
                         })
@@ -63,6 +74,7 @@ app.post("/login", (req, res) => {
                             token, 
                             user: {
                                 email: user.email,
+                                id: user._id,
                                 userType: user.userType
                             } 
                         })

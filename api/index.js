@@ -30,7 +30,7 @@ mongoose
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/user", require("./routes/users"))
+app.use("/mylot", require("./routes/users"))
 app.use("/", require("./routes/sneakerPage.js"))
 
 app.post("/addPost", (req, res) => {
