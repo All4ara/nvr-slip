@@ -26,7 +26,7 @@ const Adduser = () => {
     function addUserHandler(event) {
 
         event.preventDefault();
-        axios.post("http://localhost:3000/user/signup", username)
+        axios.post("http://localhost:3000/mylot/signup", username)
             .then((res) => {
 
                 setUser(res?.data?.user);
