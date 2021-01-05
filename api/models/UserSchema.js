@@ -1,11 +1,14 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
 
 const userSchema = new Schema({
     email: String,
     password: String,
     firstName: String,
     lastName: String,
+    imageUrl: String,
     userType: {
         type: String,
         enum: ["normal", "admin"],

@@ -12,7 +12,11 @@ const Adduser = () => {
         firstName: "",
         lastName: "",
         email: "",
-        password: ""
+        password: "",
+        img: {
+            data: Buffer,
+            contentType: ""
+        }
     })
     const history = useHistory()
 
@@ -50,7 +54,7 @@ const Adduser = () => {
                     <input className="col-12" type="text" name="lastName" value={username.lastName} placeholder="Last Name" onChange={handleUserChange}></input>
                     <input className="col-12" type="text" name="email" value={username.email} placeholder="Email" onChange={handleUserChange}></input>
                     <input className="col-12" type="password" name="password" value={username.password} placeholder="Password" onChange={handleUserChange}></input>
-
+                    <input className="col-12" type="file" name="image" value={username.img.contentType} required/>
 
                     <button type="submit">Submit</button>
                     <br /><br />

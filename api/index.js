@@ -33,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/mylot", require("./routes/users"))
 app.use("/", require("./routes/sneakerPage.js"))
 
+
 app.post("/addPost", (req, res) => {
     console.log("AUTHORIZATION HEADER", req.headers.authorization)
 

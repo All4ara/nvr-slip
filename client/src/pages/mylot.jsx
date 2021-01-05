@@ -32,7 +32,8 @@ const Mylot = (props) => {
             <div className="row">
                 <div className="col-12  text-center">
                     <img className="profile-pic col-6 col-lg-4" src="https://images.fineartamerica.com/images-medium-large-5/star-wars-themed-empty-profile-pic-pushkaraj-shirke.jpg" alt="profile picture"/>
-                    <h3 className="profile-name">{username.firstName} {username.lastName}</h3>
+                    
+                    <h3 className="profile-name col-12">{username.firstName} {username.lastName}</h3>
 
                 </div>
                 <div className="col-12 text-center">

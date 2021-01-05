@@ -3,6 +3,8 @@ const app = express();
 const User = require("../models/UserSchema");
 var jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt")
+var multer = require('multer');
+var fs = require('fs');
 
 
 app.get("/users", (req, res) => {
@@ -25,6 +27,8 @@ app.get("/users/:id", (req, res) => {
             res.status(500).json({ message: "Oops" });
         });
 });
+
+
 
 app.post("/signup", (req, res) => {
 
@@ -59,6 +63,8 @@ app.post("/signup", (req, res) => {
     
         
 })
+
+
 
 app.post("/login", (req, res) => {
     User.findOne({ email: req.body.email })
